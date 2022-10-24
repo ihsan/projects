@@ -134,7 +134,7 @@ find_secondary_disk_image()
 	# Similar logic to MiSTer update.sh script
 	ao486_dir="${AO486TOP300DIR}/AO486"
 	if [ "${AO486TOP300DIR}" == "" ]; then
-		if [ "$(find ${BASE_PATH}/games -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
+		if [ "$(find ${BASE_PATH} -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
 			ao486_dir="${BASE_PATH}/AO486"
 		else
 			ao486_dir="${BASE_PATH}/AO486"
@@ -154,7 +154,7 @@ find_primary_disk_image()
 	# Similar logic to MiSTer update.sh script
 	ao486_dir="${AO486TOP300DIR}/AO486"
 	if [ "${AO486TOP300DIR}" == "" ]; then
-		if [ "$(find ${BASE_PATH}/games -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
+		if [ "$(find ${BASE_PATH} -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
 			ao486_dir="${BASE_PATH}/AO486"
 		else
 			ao486_dir="${BASE_PATH}/AO486"
