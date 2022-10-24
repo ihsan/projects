@@ -7,7 +7,7 @@ ver="v.0.12"
 # Specifies the Games/Programs subdirectory where core specific directories will be placed.
 # AO486TOP300DIR="" for letting the script choose between /media/fat and /media/fat/games when it exists,
 # otherwise the subdir you prefer (i.e. AO486TOP300DIR="/Programs").
-AO486TOP300DIR="/media/fat/AO486"
+AO486TOP300DIR=""
 
 # Base directory for all script’s tasks, "/media/fat" for SD root, "/media/usb0" for USB drive root.
 BASE_PATH="/media/fat"
@@ -134,10 +134,10 @@ find_secondary_disk_image()
 	# Similar logic to MiSTer update.sh script
 	ao486_dir="${AO486TOP300DIR}/AO486"
 	if [ "${AO486TOP300DIR}" == "" ]; then
-		if [ "$(find ${BASE_PATH}/games -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
+		if [ "$(find ${BASE_PATH} -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
 			ao486_dir="${BASE_PATH}/AO486"
 		else
-			ao486_dir="${BASE_PATH}/games/AO486"
+			ao486_dir="${BASE_PATH}/AO486"
 		fi
 	fi
 
@@ -154,10 +154,10 @@ find_primary_disk_image()
 	# Similar logic to MiSTer update.sh script
 	ao486_dir="${AO486TOP300DIR}/AO486"
 	if [ "${AO486TOP300DIR}" == "" ]; then
-		if [ "$(find ${BASE_PATH}/games -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
+		if [ "$(find ${BASE_PATH} -type f -print -quit 2> /dev/null)" == "" ] && [ "$(find ${BASE_PATH}/AO486 -type f -print -quit 2> /dev/null)" != "" ]; then
 			ao486_dir="${BASE_PATH}/AO486"
 		else
-			ao486_dir="${BASE_PATH}/games/AO486"
+			ao486_dir="${BASE_PATH}/AO486"
 		fi
 	fi
 
