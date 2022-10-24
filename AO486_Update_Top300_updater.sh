@@ -7,7 +7,7 @@ ver="v.0.12"
 # Specifies the Games/Programs subdirectory where core specific directories will be placed.
 # AO486TOP300DIR="" for letting the script choose between /media/fat and /media/fat/games when it exists,
 # otherwise the subdir you prefer (i.e. AO486TOP300DIR="/Programs").
-AO486TOP300DIR=""
+AO486TOP300DIR="/media/fat"
 
 # Base directory for all script’s tasks, "/media/fat" for SD root, "/media/usb0" for USB drive root.
 BASE_PATH="/media/fat"
